@@ -1,0 +1,127 @@
+<script>
+
+
+// Array helper Methods
+
+
+
+// Foreach
+// Map
+// Filter
+// Find
+// Every
+// Some
+// Reduce
+
+
+var numbers = [{
+color : "Red"
+},{
+color : "Blue"
+
+},{
+color : "Green"
+
+},{
+color : "Yellow"
+
+}]
+
+// Declared for debuggind Purposes
+var holder;
+var each;
+
+numbers.reduce((holder , each )=>{
+
+holder.push(each.color)
+
+return holder
+
+}, [])
+
+
+// Deconstructors
+
+
+var person = {
+  name : 'Donald',
+  sex : 'Not Yet',
+  wives : [' Melania Trump' , 'Marla Maples ' , 'Ivana Trump']
+}
+
+
+const {wives} = person ;
+
+[a,b,c] = wives ;
+
+a; // Melania Trump
+
+
+
+
+
+var numbers = [2,3,4,5,6]
+var array = [];
+numbers.forEach(function(x){
+
+return array.push(x * 2)
+
+})
+array;
+
+
+
+// Spread Operators
+
+var Array1 = [1,2,3,4]
+var Array2 = [10,20,30,40]
+var c = [...Array1,...Array2, Array1]
+
+c;
+
+
+//Filter Operator
+// Filters all the matching elements in the array
+
+var legal = [2,12,54,32,19,98,23,12]
+
+legal.filter((age)=>{
+    return age >= 19
+})
+
+// Find Operator
+// Stops after the first find is completed
+
+var legal = [2,12,54,32,19,98,23,12]
+
+legal.find((age)=>{
+    return age >= 19
+})
+
+
+
+// Every Operator
+// Checks the entire array for one match return true or false
+
+var legal = [2,12,54,32,19,98,23,12]
+
+legal.every((age)=>{
+    return age > 1
+})
+
+// Some Operator
+// Checks the entire array for one or many matches - returns true or false
+
+
+var legal = [2,12,54,32,19,98,23,12]
+
+legal.some((age)=>{
+    return age > 1
+})
+
+
+
+
+
+
+</script>
