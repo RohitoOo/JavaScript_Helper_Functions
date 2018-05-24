@@ -121,5 +121,72 @@ legal.some((age)=>{
 })
 
 
+// CALL BACK = function passed as an argument within a function
+
+
+// Embedded Call Back Functions
+
+function a(){
+  console.log("Inside A")
+  return {b :   () => {
+    console.log("Inside B")
+    return { c: () => {
+      console.log("Inside C")
+    }}
+
+    }
+   }
+
+}
+
+a().b().c();
+
+
+
+// States of Promises:
+// Resolve Reject and Unresolve 
+
+var promise = new Promise((resolve,reject)=>{
+  reject()
+})
+
+promise.then(()=>{
+console.log("Hey, I am finished doing ")
+}).catch(()=>{
+console.log(“Sorry I have failed YOU!”)
+}
+
+
+
+
+var promise = new Promise((resolve,reject)=>{
+  resolve();
+})
+
+promise.then(()=>{
+console.log("Hey, I am finished doing ")
+}).then(()=>{
+console.log("Heyyyyy, I am finished doing ")
+}).catch(()=>{
+console.log(“Sorry I have failed YOU!”)
+})
+
+
+
+var promise = new Promise((resolve,reject)=>{
+  resolve();
+})
+
+promise.then(()=>{
+console.log("Heyyyyy, I am finished doing")
+reject();
+}).then(()=>{
+console.log("YOOO, I am finished doing")
+}).catch(()=>{
+console.log("Catch")
+})
+
+
+
 
 </script>
