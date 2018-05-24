@@ -144,7 +144,7 @@ a().b().c();
 
 
 // States of Promises:
-// Resolve Reject and Unresolve 
+// Resolve Reject and Unresolve
 
 var promise = new Promise((resolve,reject)=>{
   reject()
@@ -178,10 +178,10 @@ var promise = new Promise((resolve,reject)=>{
 })
 
 promise.then(()=>{
-console.log("Heyyyyy, I am finished doing")
+console.log("First .then Response - Heyyyyy ")
 reject();
 }).then(()=>{
-console.log("YOOO, I am finished doing")
+console.log("Second .then Response - YOOO ")
 }).catch(()=>{
 console.log("Catch")
 })
